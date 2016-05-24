@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Finite State Machine - JointJS</title>
+
+
+	<link rel="stylesheet" type="text/css" href="../joint.css" />
+	<script src="../jquery.min.js"></script>
+	<script src="../lodash.min.js"></script>
+	<script src="../backbone-min.js"></script>
+	<script src="../joint.js"></script>
+	<script src="../lib/paper.js"></script>
+	<script src="../lib/quest_fsm.js"></script>
+	<!-- <script src="finite_state_machine.js"></script> -->
+</head>
+<body>
+
+	<div id="paper"></div>
+	<script type="text/javascript">
+	var paper = new Paper('#paper');
+	var fsm = new Questions.FiniteStateMachine();
+
+
+
+	// var graph = new joint.dia.Graph();
+	//
+	// var paper = new joint.dia.Paper({
+	// 	el : $('#paper'),
+	// 	width : 800,
+	// 	height : 600,
+	// 	gridSize : 1,
+	// 	model : graph
+	// });
+
+	// function state(x, y, label) {
+	//
+	// 	var cell = new joint.shapes.fsa.State({
+	// 		position : {
+	// 			x : x,
+	// 			y : y
+	// 		},
+	// 		size : {
+	// 			width : 60,
+	// 			height : 60
+	// 		},
+	// 		attrs : {
+	// 			text : {
+	// 				text : label,
+	// 				fill : '#000000',
+	// 				'font-weight' : 'normal'
+	// 			},
+	// 			'circle' : {
+	// 				fill : '#f6f6f6',
+	// 				stroke : '#000000',
+	// 				'stroke-width' : 2
+	// 			}
+	// 		}
+	// 	});
+	// 	graph.addCell(cell);
+	// 	return cell;
+	// }
+
+	// function link(source, target, label, vertices) {
+	//
+	// 	var cell = new joint.shapes.fsa.Arrow({
+	// 		source : {
+	// 			id : source.id
+	// 		},
+	// 		target : {
+	// 			id : target.id
+	// 		},
+	// 		labels : [ {
+	// 			position : 0.5,
+	// 			attrs : {
+	// 				text : {
+	// 					text : label || '',
+	// 					'font-weight' : 'bold'
+	// 				}
+	// 			}
+	// 		} ],
+	// 		vertices : vertices || []
+	// 	});
+	// 	graph.addCell(cell);
+	// 	return cell;
+	// }
+
+	// var start = new joint.shapes.fsa.StartState({
+	// 	position : {
+	// 		x : 50,
+	// 		y : 530
+	// 	}
+	// });
+	// graph.addCell(start);
+
+	// var code = state(180, 390, 'code');
+	// var slash = state(340, 220, 'slash');
+	// var star = state(600, 400, 'star');
+	// var line = state(190, 100, 'line');
+	// var block = state(560, 140, 'block');
+
+	var code = fsm.buildState(180, 390, 'code');
+	var slash = fsm.buildState(340, 220, 'slash');
+	var star = fsm.buildState(600, 400, 'star');
+	var line = fsm.buildState(190, 100, 'line');
+	var block = fsm.buildState(560, 140, 'block');
+
+	fsm.linkStates(fsm.getStart(), code, 'start');
+	fsm.linkStates(code, slash, '/');
+	fsm.linkStates(slash, code, 'other', [ {
+		x : 270,
+		y : 300
+	} ]);
+	fsm.linkStates(slash, line, '/');
+	fsm.linkStates(line, code, 'new\n line');
+	fsm.linkStates(slash, block, '*');
+	fsm.linkStates(block, star, '*');
+	fsm.linkStates(star, block, 'other', [ {
+		x : 650,
+		y : 290
+	} ]);
+	fsm.linkStates(star, code, '/', [ {
+		x : 490,
+		y : 310
+	} ]);
+	fsm.linkStates(line, line, 'other', [ {
+		x : 115,
+		y : 100
+	}, {
+		x : 250,
+		y : 50
+	} ]);
+	fsm.linkStates(block, block, 'other', [ {
+		x : 485,
+		y : 140
+	}, {
+		x : 620,
+		y : 90
+	} ]);
+	fsm.linkStates(code, code, 'other', [ {
+		x : 180,
+		y : 500
+	}, {
+		x : 305,
+		y : 450
+	} ]);
+
+	fsm.draw(paper.getGraph());
+
+	</script>
+
+
+</body>
+</html>
