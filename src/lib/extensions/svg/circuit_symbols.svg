@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg4490" inkscape:export-ydpi="108.94736" inkscape:export-xdpi="108.94736" sodipodi:docname="circuit_symbols.svg" inkscape:version="0.47pre4 r22446" sodipodi:version="0.32" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" inkscape:export-filename="circuit_symbols.png" inkscape:output_extension="org.inkscape.output.svg.inkscape"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="570px" height="210px"
+	 viewBox="0 0 570 210" enable-background="new 0 0 570 210" xml:space="preserve">
+<defs>
+	
+	
+		<inkscape:perspective  id="perspective5273" inkscape:persp3d-origin="70 : 20 : 1" inkscape:vp_z="140 : 30 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 30 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3873" inkscape:persp3d-origin="425 : 333.33333 : 1" inkscape:vp_z="850 : 500 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 500 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective6852" inkscape:persp3d-origin="71.875 : 83.333333 : 1" inkscape:vp_z="143.75 : 125 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 125 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective10" inkscape:persp3d-origin="372.04724 : 350.78739 : 1" inkscape:vp_z="744.09448 : 526.18109 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 526.18109 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective7640" inkscape:persp3d-origin="282.14999 : 309 : 1" inkscape:vp_z="564.29999 : 463.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 463.5 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4130" inkscape:persp3d-origin="22.5 : 5 : 1" inkscape:vp_z="45 : 7.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 7.5 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4418" inkscape:persp3d-origin="375 : 200 : 1" inkscape:vp_z="750 : 300 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 300 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective5508" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective5053" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4417" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4448" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4473" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4500" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective5191" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective5235" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective5459" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_z="1 : 0.5 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_x="0 : 0.5 : 1" sodipodi:type="inkscape:persp3d">
+		</inkscape:perspective>
+</defs>
+<sodipodi:namedview  id="base" inkscape:snap-global="false" inkscape:guide-bbox="true" inkscape:window-y="25" inkscape:window-x="0" inkscape:window-height="975" inkscape:window-width="1280" inkscape:grid-points="true" inkscape:grid-bbox="true" inkscape:current-layer="layer1" inkscape:document-units="px" inkscape:pageshadow="2" inkscape:pageopacity="1" showguides="false" showgrid="true" inkscape:cy="156.61888" inkscape:cx="146.16502" inkscape:zoom="1.4142136" borderopacity="1.0" bordercolor="#666666" pagecolor="#ffffff" inkscape:window-maximized="1">
+	<sodipodi:guide  id="guide5291" orientation="24,0" position="42.155719,24.254747"></sodipodi:guide>
+	<sodipodi:guide  id="guide4544" orientation="55.6821,0" position="-68.338819,87.558107"></sodipodi:guide>
+	<sodipodi:guide  id="guide4550" orientation="0,0" position="-68.338819,87.558107"></sodipodi:guide>
+	<sodipodi:guide  id="guide4552" orientation="0.5,0.8660254" position="-68.338819,87.558107"></sodipodi:guide>
+	<sodipodi:guide  id="guide4554" orientation="-0.5,0.8660254" position="-68.338819,31.876007"></sodipodi:guide>
+	<sodipodi:guide  id="guide4575" orientation="0,1" position="-68.338819,31.876007"></sodipodi:guide>
+	<sodipodi:guide  id="guide4585" orientation="0,12.625" position="-112.0103,50.436707"></sodipodi:guide>
+	<sodipodi:guide  id="guide4587" orientation="0,12.625" position="-112.0103,68.997402"></sodipodi:guide>
+	<sodipodi:guide  id="guide5177" orientation="1,0" position="-85.010302,58.681637"></sodipodi:guide>
+	<sodipodi:guide  id="guide5205" orientation="1,0" position="-20.116706,59.717057"></sodipodi:guide>
+	<sodipodi:guide  id="guide5338" orientation="-3.483387,2.589534" position="23.427198,123.02539"></sodipodi:guide>
+	<sodipodi:guide  id="guide5340" orientation="4.001542,1.691828" position="22.020948,122.90039"></sodipodi:guide>
+	<sodipodi:guide  id="guide5356" orientation="-0.518155,4.281362" position="24.371678,136.34066"></sodipodi:guide>
+	<sodipodi:guide  id="guide5358" orientation="-3.483387,-2.589534" position="22.405037,141.53347"></sodipodi:guide>
+	<sodipodi:guide  id="guide5360" orientation="4.001542,-1.691828" position="22.239309,140.84846"></sodipodi:guide>
+	<sodipodi:guide  id="guide5362" orientation="0,0" position="20.115662,135.82557"></sodipodi:guide>
+	<sodipodi:guide  id="guide5509" orientation="-21.906991,0" position="240.5979,122.18325"></sodipodi:guide>
+	<sodipodi:guide  id="guide5511" orientation="0,21.779296" position="240.5979,144.09024"></sodipodi:guide>
+	<sodipodi:guide  id="guide5513" orientation="21.906991,0" position="262.3772,144.09024"></sodipodi:guide>
+	<sodipodi:guide  id="guide5515" orientation="0,-21.779296" position="262.3772,122.18325"></sodipodi:guide>
+	<sodipodi:guide  id="guide5517" orientation="-13.611322,0" position="251.48755,108.63637"></sodipodi:guide>
+	<sodipodi:guide  id="guide5521" orientation="0,1" position="251.48755,157.63713"></sodipodi:guide>
+	<sodipodi:guide  id="guide5523" orientation="0,1" position="251.48755,108.63637"></sodipodi:guide>
+	<sodipodi:guide  id="guide5638" orientation="0,-18.46836" position="342.26347,63.541407"></sodipodi:guide>
+	<sodipodi:guide  id="guide5640" orientation="0.5,-0.8660254" position="325.1875,65.96875"></sodipodi:guide>
+	<sodipodi:guide  id="guide5642" orientation="1,0" position="325.1875,63.541407"></sodipodi:guide>
+	<sodipodi:guide  id="guide5644" orientation="0.5,0.8660254" position="320.98322,63.541407"></sodipodi:guide>
+</sodipodi:namedview>
+<g id="layer1" transform="translate(-17.844281,167.74524)" inkscape:label="Layer 1" inkscape:groupmode="layer">
+	<g id="g5888">
+		<path id="path7119" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M208.708-115.382v19.056"/>
+		<path id="path8000" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M215.117-85.438h-12.818"/>
+		<path id="path8002" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M208.708-85.438v19.055"/>
+		<path id="path1333" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M219.39-85.438l-0.534-1.634
+			 M219.39-85.438l-1.603,0.544 M219.39-85.438l-5.341-2.723"/>
+		<path id="path1337" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M220.992-89.249
+			l-0.534-1.633 M220.992-89.249l-1.603,0.544 M220.992-89.249l-5.341-2.722"/>
+		<path id="path5293" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M215.117-96.327h-12.818
+			l6.409,10.889L215.117-96.327z"/>
+	</g>
+	<g id="g5593">
+		<path id="path4235" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M333.171-99.049h-10.822"/>
+		<path id="path4237" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M333.171-88.16h-10.822"/>
+		<path id="path4239" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M333.171-77.271h-10.822"/>
+		
+			<path id="path4241" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M338.584-82.715h-21.646"/>
+		
+			<path id="path4243" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M338.584-93.604h-21.646"/>
+		
+			<path id="path4247" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M338.584-104.493h-21.646"/>
+		<path id="path4251" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M327.76-77.271v10.889"/>
+		<path id="path4253" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M327.76-115.382v10.889"/>
+	</g>
+	<g id="g5313" transform="translate(88.267427,-5.6933582)">
+		<path id="path7209" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M79.567-75.305v-20.484"/>
+		
+			<path id="path7211" sodipodi:nodetypes="cccccc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M92.222-61.054v-15.039H82.73v-18.909h9.492v-15.038"/>
+		<path id="path7213" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M67.216-85.547h7.605"/>
+		
+			<path id="path7215" sodipodi:type="arc" sodipodi:ry="1.5" sodipodi:rx="1.5" sodipodi:cy="25" sodipodi:cx="20.5" fill="none" stroke="#000000" stroke-width="0.6334" stroke-linecap="round" stroke-linejoin="round" d="
+			M79.567-85.547c0,1.305-1.063,2.364-2.373,2.364c-1.311,0-2.373-1.059-2.373-2.364c0-1.306,1.063-2.364,2.373-2.364
+			C78.504-87.911,79.567-86.853,79.567-85.547z"/>
+		<path id="path7217" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M82.73-98.153v25.212"/>
+	</g>
+	<text transform="matrix(1 0 0 1 31.3042 -122.5314)" font-family="'ArialMT'" font-size="12">NPN</text>
+	<g id="g12332" transform="translate(89.580537,-8.393702)">
+		<text transform="matrix(1 0 0 1 326.0528 -4.0683)" font-family="'ArialMT'" font-size="12">8. Gnd</text>
+		<text transform="matrix(1 0 0 1 326.0528 -68.375)" font-family="'ArialMT'" font-size="12">4. This</text>
+		
+			<path id="rect9744" sodipodi:nodetypes="cccccssscc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M322.091-131.728V37.624h168.4v-169.352h-66.849c0,0.094,0,0.186,0,0.28c0,9.984-8.101,18.084-18.085,18.084
+			s-18.085-8.101-18.085-18.084c0-0.095,0-0.186,0-0.28H322.091L322.091-131.728z"/>
+		<text transform="matrix(0 1 -1 0 401.877 -91.2363)" font-family="'ArialMT'" font-size="20">Chip Num</text>
+		<text transform="matrix(1 0 0 1 326.0528 -116.6006)" font-family="'ArialMT'" font-size="12">1. Left</text>
+		<text transform="matrix(1 0 0 1 326.0528 -100.5283)" font-family="'ArialMT'" font-size="12">2. Align</text>
+		<text transform="matrix(1 0 0 1 326.0528 -84.457)" font-family="'ArialMT'" font-size="12">3. On</text>
+		<text transform="matrix(1 0 0 1 326.0528 -52.4287)" font-family="'ArialMT'" font-size="12">5. Side</text>
+		<text transform="matrix(1 0 0 1 326.0528 -36.2216)" font-family="'ArialMT'" font-size="12">6.</text>
+		<text transform="matrix(1 0 0 1 326.0528 -20.1406)" font-family="'ArialMT'" font-size="12">7. Vdd</text>
+		<text transform="matrix(1 0 0 1 326.0528 12.1377)" font-family="'ArialMT'" font-size="12">9.</text>
+		<text transform="matrix(1 0 0 1 326.0528 28.3448)" font-family="'ArialMT'" font-size="12">10.</text>
+		<text transform="matrix(1 0 0 1 439.4503 -116.4756)" font-family="'ArialMT'" font-size="12">Right 20.</text>
+		<text transform="matrix(1 0 0 1 440.7803 -100.3535)" font-family="'ArialMT'" font-size="12">Align 19.</text>
+		<text transform="matrix(1 0 0 1 451.4561 -84.2314)" font-family="'ArialMT'" font-size="12">On 18.</text>
+		<text transform="matrix(1 0 0 1 444.794 -68.1093)" font-family="'ArialMT'" font-size="12">This 17.</text>
+		<text transform="matrix(1 0 0 1 443.4464 -51.9873)" font-family="'ArialMT'" font-size="12">Side 16.</text>
+		<text transform="matrix(1 0 0 1 470.7979 -35.8652)" font-family="'ArialMT'" font-size="12">15.</text>
+		<text transform="matrix(1 0 0 1 440.7862 -19.7441)" font-family="'ArialMT'" font-size="12">Easy 14.</text>
+		<text transform="matrix(1 0 0 1 454.7901 -3.622)" font-family="'ArialMT'" font-size="12">To 13.</text>
+		<text transform="matrix(1 0 0 1 446.1124 12.5)" font-family="'ArialMT'" font-size="12">Add 12.</text>
+		<text transform="matrix(1 0 0 1 416.3233 28.6221)" font-family="'ArialMT'" font-size="12">Pin labels 11.</text>
+	</g>
+	<text transform="matrix(1 0 0 1 316.7271 15.7469)" font-family="'ArialMT'" font-size="12">10 kΩ</text>
+	<text transform="matrix(1 0 0 1 261.9278 14.6249)" font-family="'ArialMT'" font-size="12">0.1 μf</text>
+	<g id="g8614" transform="matrix(0.93946879,0,0,0.93946879,83.013599,-21.026015)">
+		<path id="path8362" fill="none" stroke="#000000" stroke-width="1.0644" stroke-linecap="round" d="M181.091-1.845h20.86"/>
+		<path id="path8364" fill="none" stroke="#000000" stroke-width="1.0644" stroke-linecap="round" d="M181.091-6.069h20.86"/>
+		<path id="path8368" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-width="1.0644" stroke-linecap="round" d="
+			M191.52-6.069v-23.967"/>
+		<path id="path8370" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-width="1.0644" stroke-linecap="round" d="
+			M191.52,22.123V-1.845"/>
+	</g>
+	<g id="g5625">
+		
+			<rect id="rect8380" x="378.626" y="-24.97" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" width="16.875" height="8.703"/>
+		<path id="path8382" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M378.552-27.495h17.021"/>
+		<path id="path8384" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M378.552-13.741h17.021"/>
+		
+			<path id="path8386" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M387.063-27.517v-17.588"/>
+		
+			<path id="path8388" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M387.063-13.714V3.874"/>
+	</g>
+	<g id="g5404" transform="translate(100.11615,-5.6933582)">
+		<g id="g5400">
+			<path id="path8429" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M128.762-113.863h26.537"/>
+			<path id="path8435" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+				M142.031-113.848v13.744"/>
+		</g>
+		<text transform="matrix(1 0 0 1 130.8102 -116.4689)" font-family="'ArialMT'" font-size="12">Vdd</text>
+	</g>
+	<text transform="matrix(1 0 0 1 197.7217 -122.5314)" font-family="'ArialMT'" font-size="12">LED</text>
+	<g id="g8634" transform="matrix(0.90553793,0,0,0.90553793,92.352913,-20.258412)">
+		<path id="path8622" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-width="1.1043" stroke-linecap="round" d="
+			M215.109,1.415c5.811-5.811,16.024-5.618,21.641,0"/>
+		<path id="path8624" fill="none" stroke="#000000" stroke-width="1.1043" stroke-linecap="round" d="M215.109-7.144h21.641"/>
+		<path id="path8626" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-width="1.1043" stroke-linecap="round" d="
+			M225.93-7.144V-32.01"/>
+		<path id="path8628" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-width="1.1043" stroke-linecap="round" d="
+			M225.93,22.104V-2.761"/>
+	</g>
+	<text transform="matrix(1 0 0 1 261.629 -122.3732)" font-family="'ArialMT'" font-size="12">DC</text>
+	<text transform="matrix(1 0 0 1 291.334 -122.3732)" font-family="'ArialMT'" font-size="12">AC</text>
+	<text transform="matrix(1 0 0 1 317.9459 -122.5314)" font-family="'ArialMT'" font-size="12">Batt</text>
+	<text transform="matrix(1 0 0 1 30.459 34.0653)" font-family="'ArialMT'" font-size="12">12 pt text, lines 1 px wide - Standard component height 50px</text>
+	<text transform="matrix(1 0 0 1 30.459 -152.9347)" font-family="'MyriadPro-Regular'" font-size="12">SVG Circuit Symbols - Matthew Beckler - http://www.mbeckler.org/inkscape/circuit_symbols/</text>
+	
+		<path id="path13572" sodipodi:type="arc" sodipodi:ry="1.9662921" sodipodi:rx="1.9662921" sodipodi:cy="116.4794" sodipodi:cx="112.64045" d="
+		M244.681-95.482c0.002,1.381-1.115,2.502-2.496,2.504c-1.38,0.002-2.502-1.115-2.504-2.496c0-0.003,0-0.005,0-0.008
+		c-0.002-1.381,1.115-2.502,2.496-2.504c1.381-0.002,2.502,1.115,2.504,2.496C244.681-95.487,244.681-95.484,244.681-95.482z"/>
+	<text transform="matrix(1 0 0 1 365.4107 15.8671)" font-family="'ArialMT'" font-size="12">Crystal</text>
+	
+		<path id="path1318" sodipodi:nodetypes="ccscscscscc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+		M140.749-49.175v6.25c0,0,4.545,0,4.545,4.545s-4.545,4.546-4.545,4.546s4.545-0.001,4.545,4.545s-4.545,4.546-4.545,4.546
+		s4.545,0,4.545,4.545c0,4.546-4.545,4.546-4.545,4.546s4.545,0,4.545,4.546c0,4.545-4.545,4.545-4.545,4.545v6.25"/>
+	<g id="g5870">
+		
+			<path id="path3254" sodipodi:nodetypes="cccsssssssssssssssssssssssssssssccc" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M206.278,0.176h11.085v-3.801c2.239,0,4.057-1.856,4.057-4.143c0-2.287-1.817-4.144-4.057-4.144c-1.269,0-3.282,0.773-3.274,1.752
+			c0.007,0.977,1.937,1.685,3.274,1.685c2.239,0,4.057-1.856,4.057-4.143c0-2.287-1.817-4.144-4.057-4.144
+			c-1.336,0-3.226,0.622-3.226,1.697c0,1.076,1.906,1.739,3.226,1.739c2.239,0,4.057-1.856,4.057-4.143
+			c0-2.287-1.817-4.144-4.057-4.144c-1.333,0-3.29,0.631-3.299,1.68c-0.009,1.049,1.936,1.757,3.299,1.757
+			c2.239,0,4.057-1.856,4.057-4.143c0-2.287-1.817-4.144-4.057-4.144c-1.383,0-3.254,0.754-3.247,1.789
+			c0.008,1.035,1.922,1.647,3.247,1.647c2.239,0,4.057-1.856,4.057-4.143c0-2.287-1.817-4.144-4.057-4.144
+			c-1.312,0-3.238,0.747-3.19,1.754c0.047,1.006,1.846,1.683,3.19,1.683c2.239,0,4.057-1.856,4.057-4.143
+			c0-2.287-1.817-4.144-4.057-4.144c-1.341,0-3.271,0.683-3.267,1.721c0.003,1.039,1.951,1.716,3.267,1.716
+			c2.239,0,4.057-1.856,4.057-4.143c0-2.287-1.817-4.144-4.057-4.144c-1.332,0-3.254,0.654-3.259,1.712
+			c-0.005,1.058,1.921,1.725,3.259,1.725c2.239,0,4.057-1.856,4.057-4.143c0-2.287-1.883-4.21-4.057-4.144v-3.803l-11.085-0.002"/>
+		<path id="rect7491" fill="#FFFFFF" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M226.198-40.353v31.216"/>
+		<path id="path8367" fill="#FFFFFF" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M223.368-9.137v-31.216"/>
+		
+			<path id="path4642" sodipodi:nodetypes="cccsssssssssssssssssssssssssssssccc" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M243.391,0.176h-11.085v-3.801c-2.239,0-4.057-1.856-4.057-4.143c0-2.287,1.817-4.144,4.057-4.144
+			c1.269,0,3.282,0.773,3.274,1.752c-0.007,0.977-1.937,1.685-3.274,1.685c-2.239,0-4.057-1.856-4.057-4.143
+			c0-2.287,1.817-4.144,4.057-4.144c1.336,0,3.226,0.622,3.226,1.697c0,1.076-1.906,1.739-3.226,1.739
+			c-2.239,0-4.057-1.856-4.057-4.143c0-2.287,1.817-4.144,4.057-4.144c1.333,0,3.29,0.631,3.299,1.68
+			c0.009,1.049-1.936,1.757-3.299,1.757c-2.239,0-4.057-1.856-4.057-4.143c0-2.287,1.817-4.144,4.057-4.144
+			c1.383,0,3.254,0.754,3.247,1.789s-1.921,1.647-3.247,1.647c-2.239,0-4.057-1.856-4.057-4.143c0-2.287,1.817-4.144,4.057-4.144
+			c1.312,0,3.238,0.747,3.19,1.754c-0.048,1.006-1.846,1.683-3.19,1.683c-2.239,0-4.057-1.856-4.057-4.143
+			c0-2.287,1.817-4.144,4.057-4.144c1.341,0,3.271,0.683,3.268,1.721c-0.003,1.039-1.952,1.716-3.268,1.716
+			c-2.239,0-4.057-1.856-4.057-4.143c0-2.287,1.817-4.144,4.057-4.144c1.332,0,3.254,0.654,3.259,1.712
+			c0.005,1.058-1.921,1.725-3.259,1.725c-2.239,0-4.057-1.856-4.057-4.143c0-2.287,1.883-4.21,4.057-4.144v-3.803l11.085-0.002"/>
+	</g>
+	
+		<path id="path3254-2" sodipodi:nodetypes="cccsssssssssssssssssssssssssssssccc" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+		M163.277,0.176h11.085v-3.801c2.239,0,4.056-1.856,4.056-4.143c0-2.287-1.817-4.144-4.056-4.144c-1.269,0-3.282,0.773-3.275,1.752
+		c0.007,0.977,1.937,1.685,3.275,1.685c2.239,0,4.056-1.856,4.056-4.143c0-2.287-1.817-4.144-4.056-4.144
+		c-1.336,0-3.226,0.622-3.226,1.697c0,1.076,1.906,1.739,3.226,1.739c2.239,0,4.056-1.856,4.056-4.143
+		c0-2.287-1.817-4.144-4.056-4.144c-1.333,0-3.291,0.631-3.3,1.68c-0.009,1.049,1.936,1.757,3.3,1.757
+		c2.239,0,4.056-1.856,4.056-4.143c0-2.287-1.817-4.144-4.056-4.144c-1.383,0-3.255,0.754-3.247,1.789
+		c0.008,1.035,1.922,1.647,3.247,1.647c2.239,0,4.056-1.856,4.056-4.143c0-2.287-1.817-4.144-4.056-4.144
+		c-1.312,0-3.238,0.747-3.19,1.754c0.047,1.006,1.846,1.683,3.19,1.683c2.239,0,4.056-1.856,4.056-4.143
+		c0-2.287-1.817-4.144-4.056-4.144c-1.341,0-3.271,0.683-3.268,1.721c0.003,1.039,1.951,1.716,3.268,1.716
+		c2.239,0,4.056-1.856,4.056-4.143c0-2.287-1.817-4.144-4.056-4.144c-1.332,0-3.254,0.654-3.26,1.712
+		c-0.005,1.058,1.922,1.725,3.26,1.725c2.239,0,4.056-1.856,4.056-4.143c0-2.287-1.882-4.21-4.056-4.144v-3.803l-11.085-0.002"/>
+	<text transform="matrix(1 0 0 1 125.5318 14.6249)" font-family="'ArialMT'" font-size="12">Inductors</text>
+	<text transform="matrix(1 0 0 1 186.5049 14.6249)" font-family="'ArialMT'" font-size="12">Transformer</text>
+	<g id="g5612">
+		
+			<path id="path5036" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M385.091-104.294v-11.588"/>
+		
+			<path id="path5038" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M385.091-77.359v11.478"/>
+		
+			<path id="path7215-7" sodipodi:type="arc" sodipodi:ry="1.5" sodipodi:rx="1.5" sodipodi:cy="25" sodipodi:cx="20.5" fill="none" stroke="#000000" stroke-width="0.6334" stroke-linecap="round" stroke-linejoin="round" d="
+			M385.091-99.349c-1.305,0-2.363-1.062-2.363-2.373s1.059-2.373,2.363-2.373c1.306,0,2.364,1.063,2.364,2.373
+			S386.397-99.349,385.091-99.349z"/>
+		
+			<path id="path5067" sodipodi:type="arc" sodipodi:ry="1.5" sodipodi:rx="1.5" sodipodi:cy="25" sodipodi:cx="20.5" fill="none" stroke="#000000" stroke-width="0.6334" stroke-linecap="round" stroke-linejoin="round" d="
+			M385.091-77.453c-1.305,0-2.363-1.063-2.363-2.373s1.059-2.373,2.363-2.373c1.306,0,2.364,1.062,2.364,2.373
+			S386.397-77.453,385.091-77.453z"/>
+		
+			<path id="path5032" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M389.568-104.809v28.07"/>
+		<path id="path5091" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M389.671-95.818l2.606,1.504
+			v7.07l-2.622,1.513"/>
+	</g>
+	<text transform="matrix(1 0 0 1 31.0718 14.6249)" font-family="'ArialMT'" font-size="12">Op Amp</text>
+	<g id="g5275" transform="translate(111.32682,-7.2811826)">
+		<path id="_42099168" sodipodi:nodetypes="cccc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M-50.495-45.304v55.683l48.222-27.841L-50.495-45.304z"/>
+		<path id="path5179" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M-50.495-26.742h-16.671"/>
+		<path id="path5181" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M-50.495-8.182h-16.671"/>
+		<path id="path5209" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M-26.383-31.383v-16.671"/>
+		<path id="path5215" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M-26.383,13.13V-3.542"/>
+		<path id="path5217" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M14.399-17.462H-2.273"/>
+		<g id="g5269" transform="translate(-1.9445437,0)">
+			<g id="g5265" transform="translate(45.25,-2.72226)">
+				<path id="path13824-2" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M-84.21-24.021h-5.411"
+					/>
+				<path id="path13826-1" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M-86.916-21.298v-5.444
+					"/>
+			</g>
+			<path id="path13828-3" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M-44.371-8.182h5.411"/>
+		</g>
+	</g>
+	<g id="g5364" transform="translate(5.3268236,-5.6933582)">
+		<path id="path3891" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M34.529-80.121l10.79,8.164
+			v10.886"/>
+		<path id="path1309" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M58.806-85.564
+			c0,9.018-7.246,16.329-16.185,16.329s-16.185-7.311-16.185-16.329l0,0c0-9.018,7.246-16.328,16.185-16.328
+			S58.806-94.582,58.806-85.564z"/>
+		<path id="path2184" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.344-85.564h16.185"/>
+		<path id="path2186" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M34.529-95.089v19.05"/>
+		<path id="path2188" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M34.529-91.007l10.79-8.164
+			v-10.885"/>
+		<path id="path1913" sodipodi:nodetypes="cccc" d="M42.71-73.917l-5.995-0.726l3.625-4.877L42.71-73.917z"/>
+	</g>
+	<g id="g5394" transform="translate(100.11615,-5.6933582)">
+		<path id="path10167" fill="none" stroke="#000000" stroke-linecap="round" d="M150.888-66.585h-17.175"/>
+		<path id="path10169" fill="none" stroke="#000000" stroke-linecap="round" d="M147.597-63.637h-10.592"/>
+		<path id="path10171" fill="none" stroke="#000000" stroke-linecap="round" d="M144.533-60.688h-4.464"/>
+		<path id="path5379" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M142.031-80.57v13.744"/>
+	</g>
+	<text transform="matrix(1 0 0 1 75.8082 -122.5314)" font-family="'ArialMT'" font-size="12">PNP</text>
+	<g id="g5415" transform="translate(49.344221,-5.6933582)">
+		<path id="path5417" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M34.529-80.121l10.79,8.164
+			v10.886"/>
+		<path id="path5419" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M58.806-85.564
+			c0,9.018-7.246,16.329-16.185,16.329s-16.185-7.311-16.185-16.329l0,0c0-9.018,7.246-16.328,16.185-16.328
+			S58.806-94.582,58.806-85.564z"/>
+		<path id="path5421" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M18.344-85.564h16.185"/>
+		<path id="path5423" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M34.529-95.089v19.05"/>
+		<path id="path5425" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M34.529-91.007l10.79-8.164
+			v-10.885"/>
+		<path id="path5429" sodipodi:nodetypes="cccc" d="M37.96-93.571l5.993-0.725l-3.625-4.876L37.96-93.571z"/>
+	</g>
+	<g id="g5431" transform="translate(48.430116,-5.6933582)">
+		<path id="path5433" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M79.567-75.305v-20.484"/>
+		
+			<path id="path5435" sodipodi:nodetypes="cccccc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M92.222-61.054v-15.039h-9.491v-18.909h9.491v-15.038"/>
+		<path id="path5437" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M67.216-85.547h12.23"/>
+		<path id="path5441" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M82.731-98.153v25.212"/>
+	</g>
+	<text transform="matrix(1 0 0 1 109.6949 -122.5314)" font-family="'ArialMT'" font-size="12">NMOS</text>
+	<text transform="matrix(1 0 0 1 150.3995 -122.5314)" font-family="'ArialMT'" font-size="12">PMOS</text>
+	<g id="g5476" transform="translate(5.3268236,-5.6933582)">
+		<path id="path4240" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" d="M358.671-109.69v13.531
+			l-14.286,14.286"/>
+		<path id="path4242" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" d="M358.671-60.688v-15.214"/>
+		
+			<path id="path5067-4" sodipodi:type="arc" sodipodi:ry="1.5" sodipodi:rx="1.5" sodipodi:cy="25" sodipodi:cx="20.5" fill="none" stroke="#000000" stroke-width="0.6334" stroke-linecap="round" stroke-linejoin="round" d="
+			M358.671-75.997c-1.305,0-2.363-1.063-2.363-2.373s1.059-2.373,2.363-2.373c1.306,0,2.364,1.062,2.364,2.373
+			S359.976-75.997,358.671-75.997z"/>
+	</g>
+	<text transform="matrix(1 0 0 1 354.7154 -122.5314)" font-family="'ArialMT'" font-size="12">Switch</text>
+	<a id="a5499" transform="matrix(0,-0.87112462,0.86580402,0,-165.61537,429.07052)">
+		<g id="g5501" transform="translate(68.75,2.617187e-6)">
+		</g>
+	</a>
+	<g id="g5559">
+		<path id="path13824" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M271.929-96.326h-5.411"/>
+		<path id="path13826" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M269.224-93.604v-5.444"/>
+		<path id="path13828" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M266.518-85.437h5.411"/>
+		
+			<path id="path5527" sodipodi:type="arc" sodipodi:ry="10.953495" sodipodi:rx="10.88965" sodipodi:cy="76.863258" sodipodi:cx="251.48755" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M280.221-90.882c0.004,6.049-4.869,10.957-10.883,10.96s-10.893-4.897-10.896-10.947c0-0.004,0-0.008,0-0.013
+			c-0.003-6.049,4.869-10.957,10.883-10.96s10.893,4.897,10.896,10.947C280.221-90.891,280.221-90.886,280.221-90.882z"/>
+		<path id="path5529" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M269.332-115.382v13.547"/>
+		<path id="path5531" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M269.332-79.928v13.547"/>
+	</g>
+	<g id="g5553">
+		
+			<path id="path8688" sodipodi:nodetypes="czc" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M292.403-90.433c2.07-2.633,4.412-2.385,6.736,0c2.325,2.385,4.214,2.366,6.736,0"/>
+		
+			<path id="path5547" sodipodi:type="arc" sodipodi:ry="10.953495" sodipodi:rx="10.88965" sodipodi:cy="76.863258" sodipodi:cx="251.48755" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+			M310.029-90.882c0.004,6.049-4.868,10.957-10.883,10.96s-10.893-4.897-10.896-10.947c0-0.004,0-0.008,0-0.013
+			c-0.003-6.049,4.869-10.957,10.883-10.96s10.893,4.897,10.896,10.947C310.029-90.891,310.029-90.886,310.029-90.882z"/>
+		<path id="path5549" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M299.139-115.382v13.547"/>
+		<path id="path5551" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M299.139-79.928v13.547"/>
+	</g>
+	<g id="g5860">
+		<path id="path2055" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="
+			M332.164-47.832v8.167l5.439,2.723l-10.878,5.443l10.878,5.445l-10.878,5.443l10.878,5.445l-10.878,5.444l5.438,2.722v8.167"/>
+		<g id="g5856">
+			<path id="path8158" sodipodi:nodetypes="cc" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="
+				M360.108-21.286h-18.469"/>
+			<path id="path5854" d="M343.032-23.714l-4.204,2.428l4.204,2.427V-23.714z"/>
+		</g>
+	</g>
+</g>
+</svg>
