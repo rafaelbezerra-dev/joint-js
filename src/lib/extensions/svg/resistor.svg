@@ -3,6 +3,11 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="80px" height="30px" viewBox="0 0 80 30" enable-background="new 0 0 80 30" xml:space="preserve">
-<rect x="24" y="6.938" fill="#FFFFFF" width="31.75" height="16.125"/>
-<path fill="none" stroke="#000000" stroke-linejoin="bevel" d="M9.875,15h15l2.5-5l5,10l5-10l5,10l5-10l5,10l2.5-5h15"/>
+<rect x="21.803" y="5.822" fill="#FFFFFF" width="36.145" height="18.357"/>
+<path fill="none" stroke="#000000" stroke-linejoin="bevel" d="M5.722,15h17.074l2.847-5.694l5.694,11.389l5.69-11.389l5.69,11.389
+	l5.694-11.389l5.694,11.389L56.949,15h17.083"/>
+<path d="M5.722,12.153c1.57,0,2.847,1.273,2.847,2.847s-1.277,2.843-2.847,2.843c-1.574,0-2.847-1.269-2.847-2.843
+	S4.148,12.153,5.722,12.153z"/>
+<path d="M74.032,12.153c1.565,0,2.843,1.273,2.843,2.847s-1.277,2.843-2.843,2.843c-1.574,0-2.852-1.269-2.852-2.843
+	S72.458,12.153,74.032,12.153z"/>
 </svg>

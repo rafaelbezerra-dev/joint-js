@@ -6,12 +6,87 @@
 
 
 	<link rel="stylesheet" type="text/css" href="../joint.css" />
+	<style media="screen">
+		/* elements */
+
+		/*.devs text {
+		text-transform: uppercase;
+		font-weight: 800;
+		}
+
+		.devs .body {
+		fill: #ffffff;
+		stroke: #31d0c6;
+		stroke-width: 6px;
+		}
+
+		.devs .label {
+		fill: #31d0c6;
+		font-size: 16px;
+		}
+
+		.devs .port-body {
+		stroke: #ffffff;
+		stroke-width: 3px;
+		fill: #7c68fc;
+		}
+
+		.devs .port-body:hover {
+		opacity: 1;
+		fill: #ff7e5d;
+		}
+
+		.devs .port-label {
+		fill: #7c68fc;
+		}
+
+		.devs.Atomic .body {
+		stroke: #feb663;
+		}
+
+		.devs.Atomic .label {
+		fill: #feb663;
+		}*/
+
+		/* links */
+
+		/*.link .connection {
+		stroke: #4B4F6A;
+		stroke-width: 4px;
+		}
+
+		.link .marker-arrowhead, .link .marker-vertex {
+		fill: #31D0C6;
+		}
+		.link .marker-arrowhead:hover {
+		fill: #F39C12;
+		}
+
+		.link-tools .tool-remove circle {
+		fill: #fe854f;
+		}*/
+
+		/* highlighting */
+
+		/*.devs.highlighted-parent .body {
+		stroke: #fe854f;
+		transition: stroke 1s;
+		}
+
+		.devs.highlighted-parent .label {
+		fill: #fe854f;
+		transition: fill 1s;
+		text-decoration: underline;
+		}*/
+
+	</style>
 	<script src="../jquery.min.js"></script>
 	<script src="../lodash.min.js"></script>
 	<script src="../backbone-min.js"></script>
 	<script src="../joint.js"></script>
 	<script src="../lib/paper.js"></script>
 	<script src="../lib/extensions/joint.shapes.circuits.js"></script>
+	<script src="../lib/extensions/joint.shapes.devs.js"></script>
 </head>
 <body>
 
@@ -31,18 +106,44 @@
 		},
 	}));
 
-
-	graph.addCell(new joint.shapes.circuits.DC({
+	graph.addCell(new joint.shapes.circuits.Resistor({
 		position : {
 			x : 50,
-			y : 60
+			y : 50
 		},
 		size : {
-			width: 84 * 1.5,
-			height: 37 * 1.5,
+			width: 100 * 1.5,
+			height: 20 * 1.5,
 		},
 	}));
 
+	graph.addCell(new joint.shapes.devs.Model({
+	    position: { x: 50, y: 150 },
+	    size: { width: 90, height: 90 },
+	    // inPorts: ['in1','in2'],
+	    // outPorts: ['out'],
+	    // attrs: {
+	    //     '.label': { text: 'Model', 'ref-x': .4, 'ref-y': .2 },
+	    //     rect: { fill: '#2ECC71' },
+	    //     // '.inPorts circle': { fill: '#16A085' },
+	    //     // '.outPorts circle': { fill: '#E74C3C' }
+	    // }
+	}));
+
+	graph.addCell(new joint.shapes.devs.Model({
+	    position: { x: 350, y: 150 },
+	    size: { width: 90, height: 90 },
+	    // inPorts: ['in1','in2'],
+	    // outPorts: ['out'],
+	    // attrs: {
+	    //     '.label': { text: 'Model', 'ref-x': .4, 'ref-y': .2 },
+	    //     rect: { fill: '#2ECC71' },
+	    //     // '.inPorts circle': { fill: '#16A085' },
+	    //     // '.outPorts circle': { fill: '#E74C3C' }
+	    // }
+	}));
+
+	
 	</script>
 
 

@@ -11,6 +11,17 @@ function Paper(element) {
     height : 600,
     gridSize : 1,
     model : this._graph_,
+    snapLinks: true,
+    linkPinning: false,
+    // embeddingMode: true,
+    // validateEmbedding: function(childView, parentView) {
+    //     return parentView.model instanceof joint.shapes.devs.Coupled;
+    // },
+
+    validateConnection: function (sourceView, sourceMagnet, targetView, targetMagnet) {
+        return sourceMagnet != targetMagnet;        
+    }
+
     // defaultLink: function(cellView, magnet) {
     //   var link = new joint.dia.Link();
     //   link.attr({
