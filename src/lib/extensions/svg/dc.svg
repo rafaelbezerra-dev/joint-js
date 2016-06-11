@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="595.28px" height="841.89px" viewBox="0 0 595.28 841.89" enable-background="new 0 0 595.28 841.89" xml:space="preserve">
-<g id="g5559">
-	<path id="path13824" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" d="M300.585,415.919h-5.411"/>
-	<path id="path13826" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" d="M297.879,418.641v-5.444"/>
-	<path id="path13828" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" d="M295.174,426.809h5.411"/>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="50px" height="100px" viewBox="10 0 50 100" enable-background="new 10 0 50 100" xml:space="preserve">
+<g id="g5559" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+	<path id="path13824" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" d="M39.936,39.648H29.648"/>
+	<path id="path13826" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" d="M34.795,44.822V34.474"/>
+	<path id="path13828" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" d="M29.648,60.354h10.287"/>
 	
-		<path id="path5527" sodipodi:type="arc" sodipodi:ry="10.953495" sodipodi:rx="10.88965" sodipodi:cy="76.863258" sodipodi:cx="251.48755" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" d="
-		M308.877,421.363c0.004,6.049-4.869,10.957-10.883,10.96c-6.014,0.003-10.893-4.897-10.896-10.947c0-0.004,0-0.008,0-0.013
-		c-0.003-6.049,4.869-10.957,10.883-10.96s10.892,4.897,10.896,10.947C308.877,421.354,308.877,421.359,308.877,421.363z"/>
-	<path id="path5529" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" d="M297.987,396.863v13.547"/>
-	<path id="path5531" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" d="M297.987,432.316v13.547"/>
+		<path id="path5527" sodipodi:cx="251.48755" sodipodi:cy="76.863258" sodipodi:rx="10.88965" sodipodi:ry="10.953495" sodipodi:type="arc" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" d="
+		M55.707,49.999C55.713,61.5,46.449,70.834,35.012,70.84c-11.438,0.004-20.71-9.309-20.719-20.814c0-0.01,0-0.018,0-0.026
+		c-0.002-11.502,9.258-20.833,20.691-20.838c11.439-0.006,20.709,9.311,20.722,20.812C55.707,49.982,55.707,49.992,55.707,49.999z"
+		/>
+	<path id="path5529" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" d="M34.998,3.416v25.758"/>
+	<path id="path5531" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" d="M34.998,70.826v25.758"/>
 </g>
+<circle cx="35" cy="96.584" r="2.5"/>
+<circle cx="35" cy="3.416" r="2.5"/>
+<circle opacity="0.5" cx="35" cy="49.999" r="22"/>
 </svg>
