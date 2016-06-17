@@ -100,10 +100,6 @@
 			x : 50,
 			y : 10
 		},
-		size : {
-			width: 100 * 1.5,
-			height: 20 * 1.5,
-		},
 	}));
 
 	graph.addCell(new joint.shapes.circuits.Resistor({
@@ -111,11 +107,17 @@
 			x : 50,
 			y : 50
 		},
-		size : {
-			width: 100 * 1.5,
-			height: 20 * 1.5,
+	}));
+
+
+
+	graph.addCell(new joint.shapes.circuits.DC({
+		position : {
+			x : 150,
+			y : 50
 		},
 	}));
+
 
 	</script>
 

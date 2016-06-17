@@ -1,4 +1,4 @@
-/*! JointJS v0.9.6 - JavaScript diagramming library  2015-12-19 
+/*! JointJS v0.9.6 - JavaScript diagramming library  2015-12-19
 
 
 This Source Code Form is subject to the terms of the Mozilla Public
@@ -5327,12 +5327,10 @@ joint.dia.CellView = joint.mvc.View.extend({
     // i.e. `joint.dia.Element` and `joint.dia.Link`.
 
     pointerdblclick: function(evt, x, y) {
-
         this.notify('cell:pointerdblclick', evt, x, y);
     },
 
     pointerclick: function(evt, x, y) {
-
         this.notify('cell:pointerclick', evt, x, y);
     },
 
