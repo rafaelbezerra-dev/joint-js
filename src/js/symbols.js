@@ -3,7 +3,7 @@
 
 */
 
-function Controls(posx, posy, onrotate = undefined) {
+function Controls(posx, posy, onrotate = undefined, ondelete = undefined) {
     var rotateBtn = Controls.createRotateButton();
     rotateBtn.onclick = onrotate;
 
@@ -49,6 +49,8 @@ function BaseSymbol() {
     };
     this.__parent__ = undefined;
     this.__svg__ = undefined;
+    this.__mouse_drag__ = {};
+
 }
 
 BaseSymbol.id_count = 0;
@@ -100,30 +102,13 @@ BaseSymbol.prototype.getElement = function () {
 
 BaseSymbol.prototype.initEventHandlers = function () {
     var __this__ = this;
-    var x = y =  mX = mY = 0;
-
 
     // EVENT LISTENERS
-    var onmousemove  = function(evt){
-        __this__.setX(x + (evt.clientX - mX))
-        .setY(y + (evt.clientY - mY))
-        .updateTransform();
-    };
     this.__svg__.onclick = function (evt) {
         console.log('click!!!');
     };
     this.__svg__.oncontextmenu = function (evt) {
         evt.symbol = __this__;
-    };
-    this.__svg__.onmousedown = function (evt) {
-        x = __this__.x;
-        y = __this__.y;
-        mX = evt.clientX;
-        mY = evt.clientY;
-        document.addEventListener('mousemove', onmousemove, false);
-    };
-    this.__svg__.onmouseup = function (evt) {
-        document.removeEventListener('mousemove', onmousemove);
     };
     this.__svg__.onmouseenter = function (evt) {
         // mouseOver = true;
@@ -131,9 +116,35 @@ BaseSymbol.prototype.initEventHandlers = function () {
     this.__svg__.onmouseleave = function (evt) {
         // mouseOver = false;
     };
+
+    this.__svg__.addEventListener('mousedown', this.onMouseDown.bind(this), false);
+    this.__svg__.addEventListener('mouseup', this.onMouseUp.bind(this), false);
+
+
 };
 
-BaseSymbol.prototype.onRotate = function () {
+BaseSymbol.prototype.onMouseDown = function (evt) {
+    this.__mouse_drag__ = {
+        fn: this.onMouseMove.bind(this),
+        x:  this.x,
+        y:  this.y,
+        mX: evt.clientX,
+        mY: evt.clientY,
+    };
+    document.addEventListener('mousemove', this.__mouse_drag__.fn, false);
+};
+
+BaseSymbol.prototype.onMouseUp = function (evt) {
+    document.removeEventListener('mousemove', this.__mouse_drag__.fn);
+};
+
+BaseSymbol.prototype.onMouseMove = function (evt) {
+    this.setX(this.__mouse_drag__.x + (evt.clientX - this.__mouse_drag__.mX))
+        .setY(this.__mouse_drag__.y + (evt.clientY - this.__mouse_drag__.mY))
+        .updateTransform();
+};
+
+BaseSymbol.prototype.onRotate = function (evt) {
     console.log(this);
     this.setRotation(this.rotation - 45)
         .updateTransform();
