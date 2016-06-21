@@ -24,8 +24,8 @@ SVG.prototype.__init__ = function () {
 
     var __this__ = this;
     this.__DOM__.oncontextmenu = function(evt) {
-        __this__.erase(evt.symbol);
-        return false;
+        // __this__.erase(evt.symbol);
+        // return false;
     };
 };
 
