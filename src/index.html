@@ -13,8 +13,9 @@
     <script type="text/javascript" src="js/drawing.js"></script>
     <script type="text/javascript" src="js/symbols.js"></script>
 	<script type="text/javascript">
-        var container = document.body;
-        var svg = new SVG(container);
+        // var container = document.body;
+        // var svg = new SVG(container);
+		SVG.setContainer(document.body);
 
         // svg.drawText('<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />');
         // console.log(Symbols.Shapes.Rect);
@@ -22,12 +23,17 @@
 		var rect = new Rect();
 		rect.x = 200;
 		rect.y = 200;
-		svg.draw(rect);
+		SVG.draw(rect);
 
 		var rect2 = new Rect();
 		rect2.x = 500;
 		rect2.y = 200;
-		svg.draw(rect2);
+		SVG.draw(rect2);
+
+		// var coord = SVG.convertCoords(rect.__svg__, 0, 0);
+		// console.log(coord);
+		// new Link(coord.x, coord.y,coord.x + 2, coord.y + 2).draw();
+
 	</script>
 
 

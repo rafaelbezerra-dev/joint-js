@@ -2,42 +2,76 @@
 @author Rafael Nascimento Bezerra
 
 */
-function SVG(parent) {
+function DrawingEngine(parent) {
+
+    this.config = {
+        xmlns: "http://www.w3.org/2000/svg",
+        width: 800,
+        height: 600,
+    };
+
     this.__init__();
-    this.__parent__ = parent;
-    this.__parent__.appendChild(this.__DOM__);
+
+    if (parent) {
+        this.setContainer(parent);
+    }
+
 }
 
-SVG.config = {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: 800,
-    height: 600,
-};
-
-SVG.prototype.__init__ = function () {
-    this.__DOM__ = document.createElementNS(SVG.config.xmlns, 'svg');
-    this.__DOM__.setAttributeNS(null, 'viewBox', '0 0 ' + SVG.config.width + ' ' + SVG.config.height);
-    this.__DOM__.setAttributeNS(null, 'width', SVG.config.width);
-    this.__DOM__.setAttributeNS(null, 'height', SVG.config.height);
+DrawingEngine.prototype.__init__ = function () {
+    this.__DOM__ = document.createElementNS(this.config.xmlns, 'svg');
+    this.__DOM__.setAttributeNS(null, 'viewBox', '0 0 ' + this.config.width + ' ' + this.config.height);
+    this.__DOM__.setAttributeNS(null, 'width', this.config.width);
+    this.__DOM__.setAttributeNS(null, 'height', this.config.height);
     this.__DOM__.style = {display: 'block' };
 
-
-    var __this__ = this;
-    this.__DOM__.oncontextmenu = function(evt) {
-        // __this__.erase(evt.symbol);
-        // return false;
-    };
+    // var __this__ = this;
+    // this.__DOM__.oncontextmenu = function(evt) {
+    //     // __this__.erase(evt.symbol);
+    //     // return false;
+    // };
 };
 
-
-SVG.prototype.draw = function (symbol) {
-    if (symbol instanceof BaseSymbol){
-        this.__DOM__.appendChild(symbol.getElement());
+DrawingEngine.prototype.setContainer = function (element) {
+    if (element instanceof HTMLElement) {
+        this.__parent__ = element;
+        this.__parent__.appendChild(this.__DOM__);
+        // console.log(this.__DOM__.getBoundingClientRect());
+    }
+    else{
+        throw new Error('Element provided for Port constructor is not an instance of thisElement');
     }
 };
 
-SVG.prototype.erase = function (symbol) {
-    if (symbol instanceof BaseSymbol){
-        this.__DOM__.removeChild(symbol.getElement());
+DrawingEngine.prototype.draw = function (element) {
+    if (element instanceof BaseSymbol){
+        this.__DOM__.appendChild(element.getElement());
+    }
+    else if (element instanceof SVGElement){
+        this.__DOM__.appendChild(element);
     }
 };
+
+// this.draw = DrawingEngine.prototype.draw;
+
+DrawingEngine.prototype.erase = function (element) {
+    if (element instanceof BaseSymbol){
+        this.__DOM__.removeChild(element.getElement());
+    }
+};
+
+DrawingEngine.prototype.convertCoords = function (el,x,y) {
+
+      var offset = this.__DOM__.getBoundingClientRect();
+
+      var matrix = el.getScreenCTM();
+
+      return {
+        x: (matrix.a * x) + (matrix.c * y) + matrix.e - offset.left,
+        y: (matrix.b * x) + (matrix.d * y) + matrix.f - offset.top
+      };
+
+};
+
+
+SVG = new DrawingEngine();
