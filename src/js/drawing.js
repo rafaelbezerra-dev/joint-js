@@ -6,7 +6,7 @@ function DrawingEngine(parent) {
 
     this.config = {
         xmlns: "http://www.w3.org/2000/svg",
-        width: 800,
+        width: 1000,
         height: 600,
     };
 
@@ -57,6 +57,9 @@ DrawingEngine.prototype.draw = function (element) {
 DrawingEngine.prototype.erase = function (element) {
     if (element instanceof BaseSymbol){
         this.__DOM__.removeChild(element.getElement());
+    }
+    else if (element instanceof SVGElement){
+        this.__DOM__.removeChild(element);
     }
 };
 

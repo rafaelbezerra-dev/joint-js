@@ -12,7 +12,7 @@ function Controls(posx, posy, onrotate = undefined, ondelete = undefined) {
 
     this.__svg__.setAttributeNS(null,
         'transform',
-        'translate(' + posx + ', ' + posy + ')'
+        'translate(0' + posx + ', ' + posy + ')'
     );
 
 }
@@ -37,6 +37,13 @@ Controls.createRotateButton = function(){
     return path;
 };
 
+
+
+
+
+Link.EventNames = {
+    LinkRelease: 'linkrelease',
+};
 function Link(ix, iy, fx = undefined, fy = undefined) {
     this.__svg__ = document.createElementNS(SVG.config.xmlns, 'line');
     this.__svg__.setAttribute('x1', ix);
@@ -47,52 +54,102 @@ function Link(ix, iy, fx = undefined, fy = undefined) {
 
     this.__svg__.style.stroke = '#f00';
     this.__svg__.style.strokeWidth = 3;
-}
 
-Link.LinkReleaseEvent = 'linkrelease';
+    this.__listeners__ = {};
+    this.__listeners__.contextmenu = this.onContextMenu.bind(this);
+    this.__svg__.addEventListener('contextmenu', this.__listeners__.contextmenu);
+    this.__origin__ = undefined;
+    this.__dest__ = undefined;
+}
 
 Link.prototype.draw = function () {
     // console.log('link draw');
-    this.__mouse_drag__ = {
+    this.__listeners__ = {
         mousemove: this.onMouseMove.bind(this),
         mouseup: this.onMouseUp.bind(this),
     };
 
     SVG.draw(this.__svg__);
-    document.addEventListener('mousemove', this.__mouse_drag__.mousemove);
-    document.addEventListener('mouseup', this.__mouse_drag__.mouseup);
+    document.addEventListener('mousemove', this.__listeners__.mousemove);
+    document.addEventListener('mouseup', this.__listeners__.mouseup);
 };
 
+Link.prototype.setOrigin = function (vetex) {
+    // console.log(vetex);
+    if (vetex instanceof Port){
+        this.__origin__ = vetex;
+        var el = this.__origin__.getElement();
+        // console.log(el);
+        this.__listeners__.originmove = this.onOriginChange.bind(this)
+        el.addEventListener(Port.EventNames.Move, this.__listeners__.originmove);
+    }
+};
+
+Link.prototype.setDest = function (vetex) {
+    if (vetex instanceof Port){
+        this.__dest__ = vetex;
+        var el = this.__dest__.getElement();
+        // console.log(el);
+        this.__listeners__.destmove = this.onDestChange.bind(this)
+        el.addEventListener(Port.EventNames.Move, this.__listeners__.destmove);
+    }
+};
 
 Link.prototype.onMouseMove = function (evt) {
-    this.updateCoordinates(evt.clientX, evt.clientY)
+    this.updateDestCoordinates(evt.clientX, evt.clientY)
 };
 
-Link.prototype.updateCoordinates = function (x, y) {
+Link.prototype.updateDestCoordinates = function (x, y) {
     this.__svg__.setAttribute('x2', x);
     this.__svg__.setAttribute('y2', y);
 };
 
 Link.prototype.onMouseUp = function (evt) {
     // console.log('link mouse up');
-    document.removeEventListener('mousemove', this.__mouse_drag__.mousemove);
-    document.removeEventListener('mouseup', this.__mouse_drag__.mouseup);
-    this.__mouse_drag__ = {};
+    document.removeEventListener('mousemove', this.__listeners__.mousemove);
+    document.removeEventListener('mouseup', this.__listeners__.mouseup);
+    this.__listeners__ = {};
     // console.log('dispatching linkrelease event');
 
-    var e = new Event(Link.LinkReleaseEvent);
+    var e = new Event(Link.EventNames.LinkRelease);
     e.link = this;
     document.dispatchEvent(e);
+};
+
+Link.prototype.onContextMenu = function (evt) {
+    this.__svg__.removeEventListener('contextmenu', this.__listeners__.contextmenu);
+    evt.stopPropagation();
+    SVG.erase(this.__svg__);
+    return false;
+};
+
+Link.prototype.onOriginChange = function (evt) {
+    if (evt && evt.coord){
+        this.__svg__.setAttribute('x1', evt.coord.x);
+        this.__svg__.setAttribute('y1', evt.coord.y);
+    }
+};
+
+Link.prototype.onDestChange = function (evt) {
+    if (evt && evt.coord){
+        this.__svg__.setAttribute('x2', evt.coord.x);
+        this.__svg__.setAttribute('y2', evt.coord.y);
+    }
 };
 
 
 
 
+
+Port.EventNames = {
+    Move: 'portmove',
+};
 function Port(x, y){
     // if (!(element instanceof SVGElement)) {
     //     throw new Error('Element provided for Port constructor is not an instance of SVGElement');
     // }
     // this.__svg__ = element;
+
     this.x = x;
     this.y = y;
     var port_attrs = {
@@ -109,12 +166,12 @@ function Port(x, y){
     this.__svg__.style.strokeWidth = port_attrs.strokeWidth;
     this.__svg__.style.stroke = port_attrs.stroke;
 
-
     this.__svg__.addEventListener('mousedown', this.onMouseDown.bind(this));
     // this.__svg__.addEventListener('mouseup', this.onMouseUp.bind(this));
     this.__svg__.addEventListener('mouseenter', this.onMouseEnter.bind(this));
 
-    this.__mouse_drag__ = {};
+    this.__move_evt_dispacher__ = undefined;
+    this.__listeners__ = {};
     this.links = [];
 }
 
@@ -122,11 +179,18 @@ Port.prototype.getElement = function () {
     return this.__svg__;
 };
 
+Port.prototype.setMoveEventDispatcher = function (dispatcher) {
+    this.__move_evt_dispacher__ = dispatcher;
+    // this.__move_evt_dispacher__.addEventListener('move', function(){console.log('click')});
+    this.__move_evt_dispacher__.addEventListener(BaseSymbol.EventNames.Move, this.onMove.bind(this));
+};
+
 Port.prototype.onMouseDown = function (evt) {
     // console.log('port mouse down');
     var coord = SVG.convertCoords(this.__svg__, this.x, this.y);
 
     var link = new Link(coord.x, coord.y);
+    link.setOrigin(this);
     link.draw();
     this.links.push(link);
     evt.stopPropagation();
@@ -138,35 +202,50 @@ Port.prototype.onMouseUp = function (evt) {
 
 Port.prototype.onMouseEnter = function (evt) {
     // console.log('port mouse enter');
-    this.__mouse_drag__ = {
+    this.__listeners__ = {
         mouseleave: this.onMouseLeave.bind(this),
         linkrelease: this.onLinkRelease.bind(this),
     };
 
-    this.__svg__.addEventListener('mouseleave', this.__mouse_drag__.mouseleave);
-    document.addEventListener('linkrelease', this.__mouse_drag__.linkrelease);
+    this.__svg__.addEventListener('mouseleave', this.__listeners__.mouseleave);
+    document.addEventListener('linkrelease', this.__listeners__.linkrelease);
 };
 
 Port.prototype.onMouseLeave = function (evt) {
     // console.log('port mouse leave');
-    this.__svg__.removeEventListener('mouseleave', this.__mouse_drag__.mouseleave);
-    document.removeEventListener('linkrelease', this.__mouse_drag__.linkrelease);
+    this.__svg__.removeEventListener('mouseleave', this.__listeners__.mouseleave);
+    document.removeEventListener('linkrelease', this.__listeners__.linkrelease);
 
-    this.__mouse_drag__.mouseleave = undefined;
-    this.__mouse_drag__.linkrelease = undefined;
+    this.__listeners__.mouseleave = undefined;
+    this.__listeners__.linkrelease = undefined;
 };
 
 Port.prototype.onLinkRelease = function (evt) {
     // console.log('port link realease');
     var coord = SVG.convertCoords(this.__svg__, this.x, this.y);
-    evt.link.updateCoordinates(coord.x, coord.y)
-    document.removeEventListener('linkrelease', this.__mouse_drag__.linkrelease);
-    this.__mouse_drag__.linkrelease = undefined;
+    evt.link.updateDestCoordinates(coord.x, coord.y);
+    evt.link.setDest(this);
+    document.removeEventListener('linkrelease', this.__listeners__.linkrelease);
+    this.__listeners__.linkrelease = undefined;
+};
+
+Port.prototype.onMove = function (evt) {
+    // console.log('moving');
+    const e = new Event(Port.EventNames.Move);
+    e.port = this;
+    e.coord = SVG.convertCoords(this.__svg__, this.x, this.y);
+    this.__svg__.dispatchEvent(e);
+    // console.log(this.__svg__);
 };
 
 
 
 
+
+BaseSymbol.id_count = 0;
+BaseSymbol.EventNames = {
+    Move: 'elementmove',
+};
 function BaseSymbol() {
     this.constructor.id_count++;
     this.x = 0;
@@ -177,19 +256,22 @@ function BaseSymbol() {
         height: 0,
         markup:'',
     };
+    this.ports = [];
     this.__parent__ = undefined;
     this.__svg__ = undefined;
-    this.__mouse_drag__ = {};
-
+    this.__dragable__ = undefined;
+    this.__listeners__ = {};
 }
 
-BaseSymbol.id_count = 0;
 
-BaseSymbol.prototype.updateTransform = function () {
+BaseSymbol.prototype.updatePosition = function () {
     this.__svg__.setAttributeNS(null,
         'transform',
         'translate(' + this.x + ',' + this.y + ') rotate(' + this.rotation + ')'
     );
+
+    const e = new Event(BaseSymbol.EventNames.Move);
+    this.__dragable__.dispatchEvent(e);
 };
 
 BaseSymbol.prototype.setX = function (v) {
@@ -210,77 +292,58 @@ BaseSymbol.prototype.setRotation = function (v) {
     return this;
 };
 
+BaseSymbol.prototype.constructElement = function (el, dragable) {
+    this.__controls__ = new Controls(
+        this.symbol.width + 10,
+        0,
+        this.onRotate.bind(this)
+    );
+    this.__dragable__ = dragable;
+    this.__svg__ = document.createElementNS(SVG.config.xmlns, 'g');
+
+    this.__svg__.appendChild(el);
+    this.__svg__.appendChild(this.__controls__.getElement());
+
+    this.updatePosition();
+
+    this.__svg__.addEventListener('mousedown', this.onMouseDown.bind(this), false);
+    this.__svg__.addEventListener('mouseup', this.onMouseUp.bind(this), false);
+};
+
 BaseSymbol.prototype.getElement = function () {
-    if (!this.__svg__) {
-        this.__controls__ = new Controls(
-            this.symbol.width + 10,
-            0,
-            this.onRotate.bind(this)
-        );
-        this.__svg__ = document.createElementNS(SVG.config.xmlns, 'g');
-
-        this.symbol.dragble_element.style.cursor = 'move';
-        this.__svg__.appendChild(this.symbol.element);
-        this.__svg__.appendChild(this.__controls__.getElement());
-
-        this.updateTransform();
-        this.attachEventListeners();
-    }
-
     return this.__svg__;
 }
 
-BaseSymbol.prototype.attachEventListeners = function () {
-    // var __this__ = this;
-
-    // EVENT LISTENERS
-    // this.__svg__.onclick = function (evt) {
-    //     console.log('click!!!');
-    // };
-    // this.__svg__.oncontextmenu = function (evt) {
-    //     evt.symbol = __this__;
-    // };
-    // this.__svg__.onmouseenter = function (evt) {
-    //     // mouseOver = true;
-    // };
-    // this.__svg__.onmouseleave = function (evt) {
-    //     // mouseOver = false;
-    // };
-
-    // this.__svg__.addEventListener('mousedown', this.onMouseDown.bind(this), false);
-    // this.__svg__.addEventListener('mouseup', this.onMouseUp.bind(this), false);
-    this.symbol.element.addEventListener('mousedown', this.onMouseDown.bind(this), false);
-    this.symbol.element.addEventListener('mouseup', this.onMouseUp.bind(this), false);
-
-
-};
-
 BaseSymbol.prototype.onMouseDown = function (evt) {
+    this.__listeners__ = {
+        mousemove: this.onMouseMove.bind(this),
+    };
+
     this.__mouse_drag__ = {
-        fn: this.onMouseMove.bind(this),
         x:  this.x,
         y:  this.y,
         mX: evt.clientX,
         mY: evt.clientY,
     };
-    document.addEventListener('mousemove', this.__mouse_drag__.fn, false);
+
+    document.addEventListener('mousemove', this.__listeners__.mousemove, false);
 };
 
 BaseSymbol.prototype.onMouseUp = function (evt) {
-    this.__mouse_drag__ = {};
-    document.removeEventListener('mousemove', this.__mouse_drag__.fn);
+    document.removeEventListener('mousemove', this.__listeners__.mousemove);
+    this.__listeners__ = {};
 };
 
 BaseSymbol.prototype.onMouseMove = function (evt) {
     this.setX(this.__mouse_drag__.x + (evt.clientX - this.__mouse_drag__.mX))
         .setY(this.__mouse_drag__.y + (evt.clientY - this.__mouse_drag__.mY))
-        .updateTransform();
+        .updatePosition();
 };
 
 BaseSymbol.prototype.onRotate = function (evt) {
     console.log(this);
     this.setRotation(this.rotation - 45)
-        .updateTransform();
+        .updatePosition();
 };
 
 
@@ -289,7 +352,6 @@ Rect.prototype = new BaseSymbol();
 Rect.prototype.constructor = Rect;
 Rect.__super__ = BaseSymbol.prototype;
 function Rect(){
-    this.ports = [];
     this.symbol.width = 150;
     this.symbol.height = this.symbol.width/2;
 
@@ -299,17 +361,26 @@ function Rect(){
     rect.style.fill = 'rgb(0,0,255)';
     rect.style.strokeWidth = 3;
     rect.style.stroke = 'rgb(0,0,0)';
+    rect.style.cursor = 'move';
 
-    var port_left = new Port(0, this.symbol.height/2);
-    var port_right = new Port(this.symbol.width, this.symbol.height/2);
+    // var port_left = new Port(0, this.symbol.height/2);
+    // var port_right = new Port(this.symbol.width, this.symbol.height/2);
+    this.ports = [
+        new Port(0, this.symbol.height/2),                  //left port
+        new Port(this.symbol.width, this.symbol.height/2),  //right port
+    ];
 
-    var element = document.createElementNS(SVG.config.xmlns, 'g');
-    element.appendChild(rect);
-    element.appendChild(port_left.getElement());
-    element.appendChild(port_right.getElement());
-    this.symbol.dragble_element = rect;
-    this.symbol.element = element;
+    var dragble = rect;
 
+    var symbol = document.createElementNS(SVG.config.xmlns, 'g');
+    symbol.appendChild(rect);
+
+    for (var p in this.ports) {
+        symbol.appendChild(this.ports[p].getElement());
+        this.ports[p].setMoveEventDispatcher(dragble);
+    }
+
+    this.constructElement(symbol, dragble);
 }
 
 Rect.prototype.getElement = function () {
