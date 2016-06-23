@@ -83,7 +83,7 @@ BaseSymbol.prototype.setRotation = function (v) {
 BaseSymbol.prototype.getElement = function () {
     if (!this.__svg__) {
         this.__controls__ = new Controls(
-            this.symbol.width + 5,
+            this.symbol.width + 10,
             0,
             this.onRotate.bind(this)
         );
@@ -104,18 +104,18 @@ BaseSymbol.prototype.initEventHandlers = function () {
     var __this__ = this;
 
     // EVENT LISTENERS
-    this.__svg__.onclick = function (evt) {
-        console.log('click!!!');
-    };
-    this.__svg__.oncontextmenu = function (evt) {
-        evt.symbol = __this__;
-    };
-    this.__svg__.onmouseenter = function (evt) {
-        // mouseOver = true;
-    };
-    this.__svg__.onmouseleave = function (evt) {
-        // mouseOver = false;
-    };
+    // this.__svg__.onclick = function (evt) {
+    //     console.log('click!!!');
+    // };
+    // this.__svg__.oncontextmenu = function (evt) {
+    //     evt.symbol = __this__;
+    // };
+    // this.__svg__.onmouseenter = function (evt) {
+    //     // mouseOver = true;
+    // };
+    // this.__svg__.onmouseleave = function (evt) {
+    //     // mouseOver = false;
+    // };
 
     this.__svg__.addEventListener('mousedown', this.onMouseDown.bind(this), false);
     this.__svg__.addEventListener('mouseup', this.onMouseUp.bind(this), false);
@@ -135,6 +135,7 @@ BaseSymbol.prototype.onMouseDown = function (evt) {
 };
 
 BaseSymbol.prototype.onMouseUp = function (evt) {
+    this.__mouse_drag__ = {};
     document.removeEventListener('mousemove', this.__mouse_drag__.fn);
 };
 
@@ -159,14 +160,42 @@ function Rect(){
     this.symbol.width = 100;
     this.symbol.height = 50;
 
-    this.symbol.element = document.createElementNS(SVG.config.xmlns, 'rect');
-    this.symbol.element.setAttributeNS(null, 'width', this.symbol.width);
-    this.symbol.element.setAttributeNS(null, 'height', this.symbol.height);
-    this.symbol.element.style.fill = 'rgb(0,0,255)';
-    this.symbol.element.style.strokeWidth = 3;
-    this.symbol.element.style.stroke = 'rgb(0,0,0)';
+    var rect = document.createElementNS(SVG.config.xmlns, 'rect');
+    rect.setAttributeNS(null, 'width', this.symbol.width);
+    rect.setAttributeNS(null, 'height', this.symbol.height);
+    rect.style.fill = 'rgb(0,0,255)';
+    rect.style.strokeWidth = 3;
+    rect.style.stroke = 'rgb(0,0,0)';
 
+    var port_attrs = {
+        radius: 5,
+        fill: '#656565',
+        strokeWidth: 2,
+        stroke: '#000',
+    };
+    var port_letf = document.createElementNS(SVG.config.xmlns, 'circle');
+    port_letf.setAttribute('cx', 0);
+    port_letf.setAttribute('cy', (this.symbol.height/2) - (port_attrs.radius/2));
+    port_letf.setAttribute('r', port_attrs.radius);
+    port_letf.style.fill = port_attrs.fill;
+    port_letf.style.strokeWidth = port_attrs.strokeWidth;
+    port_letf.style.stroke = port_attrs.stroke;
 
+    var port_right = document.createElementNS(SVG.config.xmlns, 'circle');
+    port_right.setAttribute('cx', this.symbol.width);
+    port_right.setAttribute('cy', (this.symbol.height/2) - (port_attrs.radius/2));
+    port_right.setAttribute('r', port_attrs.radius);
+    port_right.style.fill = port_attrs.fill;
+    port_right.style.strokeWidth = port_attrs.strokeWidth;
+    port_right.style.stroke = port_attrs.stroke;
+
+    // var port1 = document.createElementNS(SVG.config.xmlns, 'circle');
+
+    var element = document.createElementNS(SVG.config.xmlns, 'g');
+    element.appendChild(rect);
+    element.appendChild(port_letf);
+    element.appendChild(port_right);
+    this.symbol.element = element;
 
 }
 
